@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 require 'mina/bundler'
 require 'mina/rails'
 require 'mina/git'
@@ -52,7 +53,6 @@ task :setup => :environment do
   queue  %[echo "-----> Be sure to edit '#{deploy_to}/#{shared_path}/config/database.yml'."]
 end
 
-desc "Deploys the current version to the server."
 task :deploy => :environment do
   deploy do
     # Put things that will set up an empty directory into a fully set-up
